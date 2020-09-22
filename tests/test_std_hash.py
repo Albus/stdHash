@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import std_hash
 
 
@@ -7,7 +9,10 @@ def test_version():
 
 def test_hash_OrderedDict():
     from collections import OrderedDict
-    assert std_hash.hash(OrderedDict({'val1': 'value val1'})).hex() == 'b7e0848c184ba8fc4786ad365810ab1a5d50f057'
+    assert std_hash.hash(OrderedDict({
+        'val1': 'value val1',
+        datetime.fromtimestamp(15384793847): datetime.fromtimestamp(15384793847)
+    })).hex() == 'd8c670dbbc3c215f52d757f09b381562b0a9afeb'
 
 
 def test_hash_BaseModel():
