@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "std-hash"
-version = "0.1.1"
+version = "0.1.2"
 description = "Тупое хеширование объектов"
 authors = ["Anton Rastyazhenko <rastyazhenko.anton@gmail.com>"]
 
